@@ -7,7 +7,7 @@ mkdir  /home/deploy/$ROOTFS
 mkdir /home/deploy/$ROOTFS/$VERSION
 mkdir /home/deploy/$ROOTFS/sdk/$VERSION
 echo "CONFIGURING BUILD"
-../qt-everywhere-src-5.15.0/./configure -release -opengl es2 -device linux-arm-generic-g++  \
+./configure -release -opengl es2 -device linux-arm-generic-g++  \
 	-device-option CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- -sysroot /home/deploy/rootfs/$ROOTFS \
 	 -opensource -confirm-license -skip qtwayland -skip qtlocation -skip qtwebengine -skip qtscript \
 	-no-feature-accessibility -make libs -prefix /usr/local/$VERSION  -extprefix /home/deploy/$ROOTFS/$VERSION \
