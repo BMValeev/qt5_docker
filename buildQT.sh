@@ -1,9 +1,8 @@
 #!/bin/bash
 
 cd /home/deploy/qt5
-FOLDER=
 VERSION=$(git rev-parse --abbrev-ref HEAD) 
-ROOTFS=$2
+ROOTFS=$1
 mkdir  /home/deploy/$ROOTFS
 mkdir /home/deploy/$ROOTFS/$VERSION
 mkdir /home/deploy/$ROOTFS/sdk/$VERSION
