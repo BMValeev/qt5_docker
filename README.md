@@ -10,4 +10,8 @@
 Сборка. В качестве имени указывается название папки в которой лежит ROOTFS
         ssh deploy@#HOSTNAME# -p3244
         ./qt5_docker/buildQT.sh #ROOTFS#
+Сохранить контенер 
+ID=$(docker ps | awk '{if((FNR>1)&&(substr($10,0,4)=="3244")) print $1}')
+docker commit -m "nighty commit" -a "GitlabAutomatical"  $ID deploy-qt5
+сохранение выполняется по нмоеру порта, если его меняете команда тоже меняется!
 
