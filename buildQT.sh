@@ -9,7 +9,7 @@ mkdir /home/deploy/$ROOTFS/sdk
 mkdir /home/deploy/$ROOTFS/sdk/$VERSION
 echo "CONFIGURING BUILD"
 ./configure -release -opengl es2 -device linux-arm-generic-g++  \
-	-device-option CROSS_COMPILE=/home/deploy/gcc-linaro-7.5.0-2019.12-i686_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- -sysroot /home/deploy/rootfs/$ROOTFS  \
+	-device-option CROSS_COMPILE=/usr/bin/arm-linux-gnueabihf- -sysroot /home/deploy/rootfs/$ROOTFS  \
 	 -opensource -confirm-license -skip qtwayland -skip qtlocation -skip qtwebengine -skip qtscript  \
 	-no-feature-accessibility -make libs -prefix /usr/local/$VERSION  -extprefix /home/deploy/$ROOTFS/$VERSION  \
 	-hostprefix /home/deploy/$ROOTFS/sdk/$VERSION -no-use-gold-linker -v -no-gbm
