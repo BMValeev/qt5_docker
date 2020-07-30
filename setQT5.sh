@@ -7,11 +7,9 @@ then
     echo -e "No parameters found. "
     exit 1
 fi
-if [[ $1 -ne $X1 ]] 
-then
-	git checkout $1
-	perl init-repository -f --branch
-fi
+git checkout $1
+perl init-repository -f --branch
+
 
 
 
